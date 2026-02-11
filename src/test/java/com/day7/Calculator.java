@@ -13,4 +13,8 @@ public class Calculator {
 		return num1 + num2 + num3;
 	}
 
+	public static void demo() {
+		System.out.println("Demo");
+	}
+
 }

@@ -30,6 +30,10 @@ public class Runner {
 		System.out.println(result);
 		
 //		test
+		Method demoMethod =clazz.getDeclaredMethod("demo");
+		demoMethod.setAccessible(true);
+		demoMethod.invoke(null);
+		
 
 	}
 
