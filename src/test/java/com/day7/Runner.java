@@ -28,6 +28,8 @@ public class Runner {
 		addMethod.setAccessible(true);
 		int result = (int) addMethod.invoke(cal, 10, 20, 30);
 		System.out.println(result);
+		
+//		test
 
 	}
 
