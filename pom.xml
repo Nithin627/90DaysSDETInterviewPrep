@@ -30,10 +30,13 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.36.0</version>
+			<version>4.40.0</version>
+
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
@@ -49,6 +52,49 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.25.3</version>
 			<scope>compile</scope>
+		</dependency>
+		<!-- Source: https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.21.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Source: https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20251224</version>
+		</dependency>
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.13.2</version>
+		</dependency>
+
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.21.1</version>
+		</dependency>
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.21.1</version>
+		</dependency>
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.21</version>
 		</dependency>
 	</dependencies>
 
@@ -75,6 +121,17 @@
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.3.0</version>
+					<configuration>
+						<suiteXmlFiles>
+							<file>src/test/resources/testng1.xml</file>
+						</suiteXmlFiles>
+						<groups>${groups}</groups>
+						<systemPropertyVariables>
+							<browser>${BrowserName}</browser>
+							<isLamdaTest>${isLamdaTest}</isLamdaTest>
+							<isHeadLess>${isHeadLess}</isHeadLess>
+						</systemPropertyVariables>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
