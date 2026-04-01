@@ -1,6 +1,7 @@
 package com.codingquetions;
 
-public class RevInteger {
+
+public class RevInteger {	
 
 	public static void main(String[] args) {
 
