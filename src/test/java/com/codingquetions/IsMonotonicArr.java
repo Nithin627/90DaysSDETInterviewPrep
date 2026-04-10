@@ -5,7 +5,7 @@ public class IsMonotonicArr {
 		
 //		Monotonic :- Arra either inc or dec order
 
-		int[] input = { 1, 2, 3, };
+		int[] input = { 1, 2, 3, 4};
 
 		boolean inc = true;
 		boolean dec = true;
